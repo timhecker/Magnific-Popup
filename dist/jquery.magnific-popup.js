@@ -1,4 +1,4 @@
-/*! Magnific Popup - v0.9.9 - 2013-12-27
+/*! Magnific Popup - v0.9.9 - 2013-12-04
 * http://dimsemenov.com/plugins/magnific-popup/
 * Copyright (c) 2013 Dmitry Semenov; */
 ;(function($) {
@@ -565,12 +565,11 @@ MagnificPopup.prototype = {
 	 */
 	parseEl: function(index) {
 		var item = mfp.items[index],
-			type;
+			type = item.type;
 
 		if(item.tagName) {
 			item = { el: $(item) };
 		} else {
-			type = item.type;
 			item = { data: item, src: item.src };
 		}
 
